@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>NextVPN.png</file>
+        <file>nextvpn.ico</file>
+        <file>stunnel.conf</file>
+        <file>connected.png</file>
+        <file>connecting.png</file>
+        <file>notconnected.png</file>
+    </qresource>
+</RCC>

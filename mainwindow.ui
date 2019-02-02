@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>340</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>NextVPN v3.05</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/nextvpn.ico</normaloff>:/nextvpn.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="btnConnect">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>336</y>
+      <width>111</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Connect</string>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSettings">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>336</y>
+      <width>111</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Settings</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblStatus">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>379</y>
+      <width>321</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Offline</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>321</width>
+      <height>135</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/NextVPN.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>156</y>
+      <width>321</width>
+      <height>175</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QGroupBox" name="connection_group">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>321</width>
+       <height>175</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>85</y>
+        <width>67</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Username: </string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>146</y>
+        <width>261</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Remember username and password</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbServers">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>50</y>
+        <width>201</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>56</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Server: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtUsername">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>83</y>
+        <width>201</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>117</y>
+        <width>67</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+        <italic>false</italic>
+        <stylestrategy>PreferDefault</stylestrategy>
+       </font>
+      </property>
+      <property name="text">
+       <string>Password:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtPassword">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>115</y>
+        <width>201</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>24</y>
+        <width>57</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Protocol: </string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmb_protos">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>16</y>
+        <width>201</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="setting_group">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>200</y>
+       <width>290</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>Mode</string>
+     </property>
+     <widget class="QRadioButton" name="rdUseProxifier">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>26</y>
+        <width>261</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use Proxifier (Recommended)</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rdSetProxy">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>52</y>
+        <width>261</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Set proxy on IE and Chrome</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="connected_group">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>200</y>
+       <width>309</width>
+       <height>163</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <widget class="QLabel" name="lblProtocol">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>10</y>
+        <width>59</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Protocol:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtProtocol">
+      <property name="geometry">
+       <rect>
+        <x>68</x>
+        <y>10</y>
+        <width>113</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SSTP</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblServer">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>32</y>
+        <width>47</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Server:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtCountry">
+      <property name="geometry">
+       <rect>
+        <x>56</x>
+        <y>32</y>
+        <width>147</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>USA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblDuration">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>54</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Duration: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtDuration">
+      <property name="geometry">
+       <rect>
+        <x>68</x>
+        <y>54</y>
+        <width>85</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>00:00:00</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblBytesIn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>114</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Bytes recieved: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtBytesIn">
+      <property name="geometry">
+       <rect>
+        <x>102</x>
+        <y>114</y>
+        <width>205</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>xxxxxxxx</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblBytesOut">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>136</y>
+        <width>67</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Bytes sent:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtBytesOut">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>136</y>
+        <width>227</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>xxxxxxxxxxxx</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnBack">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>336</y>
+      <width>111</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnWebsite">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>114</y>
+      <width>101</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCancel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>336</y>
+      <width>111</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDisconnect">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>336</y>
+      <width>111</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Disconnect</string>
+    </property>
+   </widget>
+   <zorder>btnBack</zorder>
+   <zorder>btnSettings</zorder>
+   <zorder>lblStatus</zorder>
+   <zorder>label_7</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>btnWebsite</zorder>
+   <zorder>btnDisconnect</zorder>
+   <zorder>btnCancel</zorder>
+   <zorder>btnConnect</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>cmb_protos</tabstop>
+  <tabstop>cmbServers</tabstop>
+  <tabstop>txtUsername</tabstop>
+  <tabstop>txtPassword</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>btnConnect</tabstop>
+  <tabstop>rdUseProxifier</tabstop>
+  <tabstop>rdSetProxy</tabstop>
+  <tabstop>btnBack</tabstop>
+  <tabstop>btnCancel</tabstop>
+  <tabstop>btnDisconnect</tabstop>
+  <tabstop>btnWebsite</tabstop>
+  <tabstop>btnSettings</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

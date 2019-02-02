@@ -1,0 +1,4 @@
+[dns]
+accept = 127.0.0.1:53
+connect = 107.6.142.74:8053
+client = yes
